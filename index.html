@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Inject Damage Premium | Worth It Banget</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: radial-gradient(circle at 10% 20%, #0a0f1e, #03060c);
+            font-family: 'Inter', sans-serif;
+            color: #edf2ff;
+            padding: 2rem 1.5rem;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: rgba(12, 20, 35, 0.75);
+            backdrop-filter: blur(12px);
+            border-radius: 2.5rem;
+            box-shadow: 0 30px 50px rgba(0,0,0,0.6);
+            padding: 2rem 2rem 3rem;
+            border: 1px solid rgba(255, 80, 120, 0.3);
+        }
+        .lang-switch {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            margin-bottom: 1.8rem;
+        }
+        .lang-btn {
+            background: #1e293b;
+            border: none;
+            padding: 0.6rem 1.4rem;
+            font-weight: 600;
+            border-radius: 60px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #cbd5e6;
+            border: 1px solid #475569;
+        }
+        .lang-btn i { font-size: 1.1rem; }
+        .lang-btn.active {
+            background: #ff4d6d;
+            color: #fff;
+            border-color: #ff4d6d;
+            box-shadow: 0 0 12px rgba(255, 77, 109, 0.5);
+        }
+        .lang-btn:hover:not(.active) {
+            background: #334155;
+            border-color: #ff809a;
+        }
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffb3c6, #ff4d6d, #c9184a);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.75rem;
+        }
+        .hero .tagline {
+            font-size: 1.1rem;
+            background: rgba(255, 77, 109, 0.2);
+            display: inline-block;
+            padding: 0.4rem 1.5rem;
+            border-radius: 40px;
+            backdrop-filter: blur(4px);
+            font-weight: 500;
+            color: #ffe0e6;
+        }
+        .price-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3.5rem;
+        }
+        .price-card {
+            background: #111827e6;
+            backdrop-filter: blur(4px);
+            border-radius: 2rem;
+            padding: 2rem 1.5rem;
+            flex: 1;
+            min-width: 240px;
+            max-width: 300px;
+            text-align: center;
+            transition: all 0.25s;
+            border: 1px solid rgba(255, 77, 109, 0.5);
+            box-shadow: 0 20px 30px -12px black;
+        }
+        .price-card:hover {
+            transform: translateY(-8px);
+            border-color: #ff4d6d;
+            box-shadow: 0 28px 36px -12px #00000099;
+        }
+        .region-icon { font-size: 2.5rem; margin-bottom: 0.8rem; color: #ff4d6d; }
+        .region-name { font-size: 1.6rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .price {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: #1e293b;
+            display: inline-block;
+            padding: 0.3rem 1.2rem;
+            border-radius: 60px;
+            margin: 0.8rem 0;
+            color: #ff8fa3;
+            letter-spacing: -0.5px;
+        }
+        .price-note { font-size: 0.8rem; color: #94a3b8; }
+        .payment-section {
+            background: #0f172a99;
+            backdrop-filter: blur(8px);
+            border-radius: 2rem;
+            padding: 1.8rem 2rem;
+            margin-bottom: 3rem;
+            border: 1px solid #ff4d6d40;
+        }
+        .section-title {
+            font-size: 1.7rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        .payment-icons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .payment-method {
+            background: #1e293b;
+            padding: 0.7rem 1.5rem;
+            border-radius: 80px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: 1px solid #475569;
+        }
+        .payment-method i { font-size: 1.5rem; }
+        .benefits {
+            background: #0f172a99;
+            border-radius: 2rem;
+            padding: 1.8rem 2rem;
+            margin-bottom: 2.8rem;
+        }
+        .benefits-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.8rem;
+            margin-top: 1rem;
+        }
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #1e293b;
+            padding: 0.7rem 1.6rem;
+            border-radius: 60px;
+            font-weight: 500;
+            border-left: 4px solid #ff4d6d;
+        }
+        .benefit-item i { font-size: 1.4rem; color: #ff4d6d; }
+        .chat-wrapper {
+            text-align: center;
+            margin: 2rem 0 0.5rem;
+        }
+        .telegram-btn {
+            background: linear-gradient(95deg, #ff4d6d, #c9184a);
+            color: white;
+            border: none;
+            padding: 1rem 2.4rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 60px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            box-shadow: 0 10px 20px -5px black;
+            transition: 0.2s;
+            text-decoration: none;
+        }
+        .telegram-btn:hover {
+            background: #c9184a;
+            transform: scale(1.02);
+            box-shadow: 0 16px 24px -8px black;
+        }
+        .note-chat { margin-top: 1rem; font-size: 0.8rem; color: #9ca3af; }
+        footer { text-align: center; margin-top: 3rem; font-size: 0.75rem; color: #6c7a91; border-top: 1px solid #334155; padding-top: 2rem; }
+        @media (max-width: 750px) {
+            body { padding: 1rem; }
+            .container { padding: 1.5rem; }
+            .hero h1 { font-size: 2rem; }
+            .price-card { min-width: 210px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="lang-switch">
+        <button class="lang-btn" id="btn-id"><i class="fas fa-language"></i> <span>🇮🇩 Indonesia</span></button>
+        <button class="lang-btn" id="btn-en"><i class="fas fa-globe"></i> <span>🇬🇧 English</span></button>
+    </div>
+
+    <div class="hero">
+        <h1 id="main-title">INJECT DAMAGE - WORTH IT BANGET!</h1>
+        <div class="tagline" id="sub-tag">💥 Hack Damage Max | All Game Supported | Anti Ban 💥</div>
+    </div>
+
+    <div class="price-grid">
+        <div class="price-card">
+            <div class="region-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="region-name" id="region-id-name">Indonesia</div>
+            <div class="price">80K</div>
+            <div class="price-note" id="id-note">≈ Rp80.000 IDR</div>
+        </div>
+        <div class="price-card">
+            <div class="region-icon"><i class="fas fa-dollar-sign"></i></div>
+            <div class="region-name" id="region-us-name">USA & lainnya</div>
+            <div class="price">$6</div>
+            <div class="price-note" id="us-note">USD (Global)</div>
+        </div>
+        <div class="price-card">
+            <div class="region-icon"><i class="fas fa-ring"></i></div>
+            <div class="region-name" id="region-my-name">Malaysia</div>
+            <div class="price">19 MYR</div>
+            <div class="price-note" id="my-note">Ringgit Malaysia</div>
+        </div>
+    </div>
+
+    <div class="payment-section">
+        <div class="section-title" id="payment-title">
+            <i class="fas fa-credit-card"></i> <span>METODE PEMBAYARAN SUPER LENGKAP</span>
+        </div>
+        <div class="payment-icons">
+            <div class="payment-method"><i class="fas fa-wallet"></i> DANA <i class="fas fa-check-circle" style="color:#ff4d6d;"></i></div>
+            <div class="payment-method"><i class="fab fa-paypal"></i> PayPal</div>
+            <div class="payment-method"><i class="fab fa-bitcoin"></i> Crypto (BTC/USDT)</div>
+            <div class="payment-method"><i class="fas fa-qrcode"></i> QRIS</div>
+        </div>
+    </div>
+
+    <div class="benefits">
+        <div class="section-title" id="why-title">
+            <i class="fas fa-skull-crossbones"></i> <span>KENAPA HARUS INJECT DAMAGE DARI KAMI?</span>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit-item" id="benefit1"><i class="fas fa-bolt"></i> <span>💥 Damage x1000 Work 100%</span></div>
+            <div class="benefit-item" id="benefit2"><i class="fas fa-shield-alt"></i> <span>🛡️ Anti Detect & Anti Ban</span></div>
+            <div class="benefit-item" id="benefit3"><i class="fas fa-sync-alt"></i> <span>🔄 Update Fitur Berkala GRATIS</span></div>
+            <div class="benefit-item" id="benefit4"><i class="fas fa-headset"></i> <span>💬 Support Respon Cepat 24/7</span></div>
+        </div>
+    </div>
+
+    <div class="chat-wrapper">
+        <a href="https://t.me/SiwaMods" target="_blank" rel="noopener noreferrer" class="telegram-btn" id="chat-btn">
+            <i class="fab fa-telegram-plane"></i> <span id="chat-text">Chat Admin - Beli Inject Damage</span>
+        </a>
+        <div class="note-chat" id="note-language">🌍 Bisa ubah bahasa Inggris/Indonesia, langsung chat admin untuk order & tanyakan cheat damage!</div>
+    </div>
+    <footer><span id="footer-text">© 2025 InjectDamage | Garansi work atau refund 100%</span></footer>
+</div>
+
+<script>
+    const langData = {
+        id: {
+            mainTitle: "INJECT DAMAGE - WORTH IT BANGET!",
+            subTag: "💥 Hack Damage Max | Semua Game Support | Anti Ban 💥",
+            regionIdName: "Indonesia",
+            regionUsName: "USA & lainnya",
+            regionMyName: "Malaysia",
+            idNote: "≈ Rp80.000 IDR",
+            usNote: "USD (Global)",
+            myNote: "19 MYR",
+            paymentTitle: "METODE PEMBAYARAN SUPER LENGKAP",
+            whyTitle: "KENAPA HARUS INJECT DAMAGE DARI KAMI?",
+            benefit1: "💥 Damage x1000 Work 100%",
+            benefit2: "🛡️ Anti Detect & Anti Ban",
+            benefit3: "🔄 Update Fitur Berkala GRATIS",
+            benefit4: "💬 Support Respon Cepat 24/7",
+            chatButton: "Chat Admin - Beli Inject Damage",
+            noteLanguage: "🌍 Bisa ubah bahasa Inggris/Indonesia, langsung chat admin untuk order & tanyakan cheat damage!",
+            footer: "© 2025 InjectDamage | Garansi work atau refund 100%"
+        },
+        en: {
+            mainTitle: "DAMAGE INJECTOR - SO WORTH IT!",
+            subTag: "💥 Max Damage Hack | All Games Supported | Anti Ban 💥",
+            regionIdName: "Indonesia",
+            regionUsName: "USA & Worldwide",
+            regionMyName: "Malaysia",
+            idNote: "≈ 80,000 IDR",
+            usNote: "$6 USD",
+            myNote: "19 MYR",
+            paymentTitle: "SUPER COMPLETE PAYMENT METHODS",
+            whyTitle: "WHY GET DAMAGE INJECT FROM US?",
+            benefit1: "💥 x1000 Damage 100% Working",
+            benefit2: "🛡️ Anti-Detect & No Ban",
+            benefit3: "🔄 Free Regular Feature Updates",
+            benefit4: "💬 24/7 Fast Support Response",
+            chatButton: "Chat Admin - Buy Damage Injector",
+            noteLanguage: "🌍 Switch to English/Indonesian, chat admin directly for orders & damage cheat info!",
+            footer: "© 2025 InjectDamage | 100% Money-back Guarantee if not working"
+        }
+    };
+
+    let currentLang = 'id';
+
+    function applyLanguage(lang) {
+        const t = langData[lang];
+        if (!t) return;
+        document.getElementById('main-title').innerText = t.mainTitle;
+        document.getElementById('sub-tag').innerText = t.subTag;
+        document.getElementById('region-id-name').innerText = t.regionIdName;
+        document.getElementById('region-us-name').innerText = t.regionUsName;
+        document.getElementById('region-my-name').innerText = t.regionMyName;
+        document.getElementById('id-note').innerText = t.idNote;
+        document.getElementById('us-note').innerText = t.usNote;
+        document.getElementById('my-note').innerText = t.myNote;
+        document.getElementById('payment-title').innerHTML = `<i class="fas fa-credit-card"></i> <span>${t.paymentTitle}</span>`;
+        document.getElementById('why-title').innerHTML = `<i class="fas fa-skull-crossbones"></i> <span>${t.whyTitle}</span>`;
+        
+        const benefitSpans = [
+            document.querySelector('#benefit1 span'),
+            document.querySelector('#benefit2 span'),
+            document.querySelector('#benefit3 span'),
+            document.querySelector('#benefit4 span')
+        ];
+        if (benefitSpans[0]) benefitSpans[0].innerText = t.benefit1;
+        if (benefitSpans[1]) benefitSpans[1].innerText = t.benefit2;
+        if (benefitSpans[2]) benefitSpans[2].innerText = t.benefit3;
+        if (benefitSpans[3]) benefitSpans[3].innerText = t.benefit4;
+        
+        document.getElementById('chat-text').innerText = t.chatButton;
+        document.getElementById('note-language').innerText = t.noteLanguage;
+        document.getElementById('footer-text').innerText = t.footer;
+        
+        const btnId = document.getElementById('btn-id');
+        const btnEn = document.getElementById('btn-en');
+        if (lang === 'id') {
+            btnId.classList.add('active');
+            btnEn.classList.remove('active');
+        } else {
+            btnEn.classList.add('active');
+            btnId.classList.remove('active');
+        }
+    }
+
+    function setLang(lang) {
+        currentLang = lang;
+        applyLanguage(lang);
+        localStorage.setItem('damageLang', lang);
+    }
+
+    document.getElementById('btn-id').addEventListener('click', () => setLang('id'));
+    document.getElementById('btn-en').addEventListener('click', () => setLang('en'));
+
+    const saved = localStorage.getItem('damageLang');
+    if (saved === 'en') setLang('en');
+    else setLang('id');
+</script>
+</body>
+</html>
